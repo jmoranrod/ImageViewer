@@ -10,8 +10,8 @@ public class Resizer {
     }
 
     public Size resize(int width, int height) {
-        double wRatio = 1.0 * this.width / width;
-        double hRatio = 1.0 * this.height / height;
+        double wRatio = 1 * this.width / width;
+        double hRatio = 1 * this.height / height;
         return hRatio < wRatio
                 ? new Size((int) (width * hRatio), (int) (height * hRatio))
                 : new Size((int) (width * wRatio), (int) (height * wRatio));
