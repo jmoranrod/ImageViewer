@@ -1,8 +1,9 @@
 package swing;
 
 import java.awt.image.BufferedImage;
+import model.Bitmap;
 
-public class SwingBitmap {
+public class SwingBitmap implements Bitmap {
     
     private final BufferedImage bufferedImage;
 
