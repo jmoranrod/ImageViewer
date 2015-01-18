@@ -1,35 +1,42 @@
 package mock;
 
+import java.io.File;
 import model.Bitmap;
 import model.Image;
 
 public class MockImage implements Image {
 
+    private final File file;
+    private Image nextImage;
+    private Image prevImage;
+
+    public MockImage(File file) {
+        this.file = file;
+    }
+    
     @Override
     public Image getNext() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return nextImage;
     }
 
     @Override
     public Image getPrev() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return prevImage;
     }
 
     @Override
-    public void setNext(Image image) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setNext(Image nextImage) {
+        this.nextImage = nextImage;
     }
 
     @Override
-    public void setPrev(Image image) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setPrev(Image prevImage) {
+        this.prevImage = prevImage;
     }
 
     @Override
     public Bitmap getBitmap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
-
-    
     
 }
