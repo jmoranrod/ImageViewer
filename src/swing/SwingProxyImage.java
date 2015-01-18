@@ -6,7 +6,7 @@ import javax.imageio.ImageIO;
 import model.Bitmap;
 import model.Image;
 
-public class SwingProxyImage implements Image{
+public class SwingProxyImage implements Image {
 
     private final File file;
     private Bitmap bitmap;
@@ -47,7 +47,6 @@ public class SwingProxyImage implements Image{
         try {
             return new SwingBitmap(ImageIO.read(file));
         } catch (IOException ex){
-            System.out.println("Error loading bitmap");
             return null;
         }
     }
