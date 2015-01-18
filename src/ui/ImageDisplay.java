@@ -4,7 +4,7 @@ import model.Image;
 
 public interface ImageDisplay {
     
-    public void setImage(Image image);
     public Image getImage();
+    public void setImage(Image image);
     
 }
